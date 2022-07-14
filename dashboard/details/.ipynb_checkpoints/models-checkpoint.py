@@ -5,11 +5,10 @@
 #   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
-from django.db import models
-
+from django.db import models 
 
 class Cycle6731(models.Model):
-    channel = models.BigIntegerField(blank=True, null=True)  
+    channel = models.BigIntegerField()  
     total_of_cycle = models.BigIntegerField(blank=True, null=True)
     capacity_of_charge_mah_field = models.FloatField(blank=True, null=True)  
     capacity_of_discharge_mah_field = models.FloatField(blank=True, null=True)  
@@ -17,7 +16,7 @@ class Cycle6731(models.Model):
 
 
 class Cycle6735(models.Model):
-    channel = models.BigIntegerField(blank=True, null=True) 
+    channel = models.BigIntegerField() 
     total_of_cycle = models.BigIntegerField(blank=True, null=True) 
     capacity_of_charge_mah_field = models.FloatField(blank=True, null=True) 
     capacity_of_discharge_mah_field = models.FloatField(blank=True, null=True) 
@@ -25,7 +24,7 @@ class Cycle6735(models.Model):
 
 
 class Detailtemp6731(models.Model):
-    record_id = models.BigIntegerField(blank=True, null=True) 
+    record_id = models.BigIntegerField() 
     step_name = models.TextField(blank=True, null=True)
     relative_time_h_min_s_ms_field = models.TextField(blank=True, null=True) 
     realtime = models.DateTimeField(blank=True, null=True)  
@@ -33,7 +32,7 @@ class Detailtemp6731(models.Model):
     gap_of_temperature = models.BigIntegerField(blank=True, null=True)
 
 class Detailtemp6735(models.Model):
-    record_id = models.BigIntegerField(blank=True, null=True)
+    record_id = models.BigIntegerField()
     step_name = models.TextField(blank=True, null=True)
     relative_time_h_min_s_ms_field = models.TextField(blank=True, null=True) 
     realtime = models.DateTimeField(blank=True, null=True)  
@@ -42,7 +41,7 @@ class Detailtemp6735(models.Model):
 
 
 class Detailvol6731(models.Model):
-    record_id = models.BigIntegerField(blank=True, null=True)
+    record_id = models.BigIntegerField()
     step_name = models.TextField(blank=True, null=True)
     relative_time_h_min_s_ms_field = models.TextField(blank=True, null=True) 
     realtime = models.DateTimeField(blank=True, null=True) 
@@ -51,7 +50,7 @@ class Detailvol6731(models.Model):
 
 
 class Detailvol6735(models.Model):
-    record_id = models.BigIntegerField(blank=True, null=True)
+    record_id = models.BigIntegerField()
     step_name = models.TextField(blank=True, null=True)  
     relative_time_h_min_s_ms_field = models.TextField(blank=True, null=True)
     realtime = models.DateTimeField(blank=True, null=True)
@@ -60,7 +59,7 @@ class Detailvol6735(models.Model):
 
 
 class Detail6731(models.Model):
-    record_index = models.BigIntegerField(blank=True, null=True)  
+    record_index = models.BigIntegerField()  
     status = models.TextField(blank=True, null=True)  
     jumpto = models.BigIntegerField(blank=True, null=True)  
     cycle = models.BigIntegerField( blank=True, null=True)  
@@ -74,7 +73,7 @@ class Detail6731(models.Model):
 
 
 class Detail6735(models.Model):
-    record_index = models.BigIntegerField(blank=True, null=True) 
+    record_index = models.BigIntegerField() 
     status = models.TextField(blank=True, null=True)  
     jumpto = models.BigIntegerField(blank=True, null=True)  
     cycle = models.BigIntegerField(blank=True, null=True)  
