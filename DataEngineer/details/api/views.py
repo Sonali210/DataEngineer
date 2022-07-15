@@ -16,30 +16,23 @@ def view5329(request):
 
 
 def temp08d(request):
-    response = requests.get('http://swar.helper4u.in:2258/tempa')
+    response = requests.get('http://swar.helper4u.in:8080/tempa')
     temp08d = response.json()
     print(temp08d)
-    return JsonResponse("temp08d")
+    return JsonResponse(temp08d)
     pass
 def temp29d(request):
-    response = requests.get('http://swar.helper4u.in:2258/tempb')
+    response = requests.get('http://swar.helper4u.in:8080/tempb')
     temp29d = response.json()
     print(temp29d)
-    return JsonResponse("temp29d")
+    return JsonResponse(temp29d)
     pass
-def random(request):
-    response1 = requests.get('http://www.randomnumberapi.com/api/v1.0/random?min=6&max=16&count=11')
-    random = response1.json()
-#     print(cvc08d)
-#     return JsonResponse(cvc08d)
-    return render(request, 'index1.html', {'response1':random})
-    pass
+
 def cvc08d(request):
-    response = requests.get('http://swar.helper4u.in:2258/detailsa')
+    response = requests.get('http://swar.helper4u.in:8080/detailsa')
     cvc08d = response.json()
     print(cvc08d)
-#     return JsonResponse(cvc08d)
-    return render(request, 'index1.html', {'response':cvc08d})
+    return JsonResponse(cvc08d)
     pass
 def cvc29d(request):
     response = requests.get('http://swar.helper4u.in:2258/detailsb')
